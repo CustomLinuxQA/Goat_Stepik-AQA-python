@@ -6,16 +6,15 @@ import chromedriver_autoinstaller
 
 chromedriver_autoinstaller.install()
 
-# A = str(math.ceil(math.pow(math.pi, math.e)*10000))
-
 link = "http://suninjuly.github.io/find_link_text"
 
 try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    link = browser.find_element(By.PARTIAL_LINK_TEXT, "224592")
-    link.click()
+    text_link = str(math.ceil(math.pow(math.pi, math.e) * 10000))
+    browser.find_element(By.PARTIAL_LINK_TEXT, text_link).click()
+
 
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")
