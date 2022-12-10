@@ -5,15 +5,16 @@ import chromedriver_autoinstaller
 chromedriver_autoinstaller.install()
 
 try:
-    link = "https://suninjuly.github.io/math.html"
+    link = "http://suninjuly.github.io/get_attribute.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))
 
-    x_element = browser.find_element(By.CSS_SELECTOR, ".form-group [id=input_value]")
-    x = x_element.text
+    x_element = browser.find_element(By.CSS_SELECTOR, "[valuex]")
+    x_valuex = x_element.get_attribute("valuex")
+    x = x_valuex
     y = calc(x)
 
     input1 = browser.find_element(By.ID, "answer")
@@ -32,11 +33,3 @@ finally:
     time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
-
-
-
-
-
-
-
-
