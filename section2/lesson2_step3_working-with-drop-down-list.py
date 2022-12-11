@@ -7,7 +7,7 @@ import chromedriver_autoinstaller
 chromedriver_autoinstaller.install()
 
 try:
-    link = "http://suninjuly.github.io/selects1.html"
+    link = "http://suninjuly.github.io/selects2.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
@@ -19,8 +19,7 @@ try:
     option = Select(browser.find_element(By.ID, "dropdown"))
     option.select_by_value(str(sum))
 
-    option2 = browser.find_element(By.CSS_SELECTOR, ".btn")
-    option2.click()
+    option2 = browser.find_element(By.CSS_SELECTOR, ".btn").click()
 
 finally:
     time.sleep(5)
