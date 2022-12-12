@@ -15,7 +15,7 @@ try:
 
     current_dir = os.path.abspath(os.path.dirname(__file__))    # получаем путь к директории текущего исполняемого файла
     print(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, 'file')           # добавляем к этому пути имя файла
+    file_path = os.path.join(current_dir, 'file.txt')           # добавляем к этому пути имя файла
     print(os.path.abspath(os.path.dirname(__file__)))
     input4 = browser.find_element(By.NAME, "file").send_keys(file_path)
 
