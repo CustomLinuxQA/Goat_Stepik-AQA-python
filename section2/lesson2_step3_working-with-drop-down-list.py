@@ -7,9 +7,8 @@ import chromedriver_autoinstaller
 chromedriver_autoinstaller.install()
 
 try:
-    link = "http://suninjuly.github.io/selects2.html"
     browser = webdriver.Chrome()
-    browser.get(link)
+    browser.get("http://suninjuly.github.io/selects2.html")
 
     num1 = browser.find_element(By.ID, "num1").text
     num2 = browser.find_element(By.ID, "num2").text
