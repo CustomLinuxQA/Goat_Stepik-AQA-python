@@ -3,11 +3,6 @@ import chromedriver_autoinstaller
 chromedriver_autoinstaller.install()
 
 
-@pytest.fixture
-def browser():
-    pass
-
-
 class TestMainPage():
     # номер 1
     @pytest.mark.xfail
