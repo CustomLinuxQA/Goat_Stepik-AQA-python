@@ -12,3 +12,8 @@ def test_check_button(r_browser):
     r_browser.implicitly_wait(5)  # ставлю на всякий случай, если нагрузка на сервер или плохой интернет.
     assert len(button) > 0, 'buttons not found'
     time.sleep(5)
+
+#
+# используйте в терминале эту команду:
+# pytest --language=es test_items.py
+#
